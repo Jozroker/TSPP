@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //             startActivity(intent);
 //         }
 
-        Intent intent = new Intent(getApplicationContext(),TestActivity.class);
+        Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
         startActivity(intent);
 
         /**
