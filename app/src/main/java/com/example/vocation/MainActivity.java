@@ -1,10 +1,10 @@
 package com.example.vocation;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +15,16 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar();
         if(actionBar !=null) {
             actionBar.hide();
+        }
+
+        try {
+            DBAccess dbAccess = DBAccess.getInstance(MainActivity.this);
+            dbAccess.open();
+            dbAccess.getValues();
+            dbAccess.close();
+
+        } catch (Exception e) {
+            System.out.println("Null");
         }
     }
 
