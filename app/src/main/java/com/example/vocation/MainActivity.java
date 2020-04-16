@@ -31,24 +31,10 @@ public class MainActivity extends AppCompatActivity {
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void onClickLogin(View view) {
-        /**
-         *
-         * Uncomment main login method
-         *
-         */
-//         if (LoginChecker.autentefication(this, editTextID.getText().toString(),
-//                editTextFname.getText().toString(), editTextLname.getText().toString())) {
-//             Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
-//             startActivity(intent);
-//         }
-
-        Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
-        startActivity(intent);
-
-        /**
-         *
-         */
-
-
+         if (LoginChecker.autentefication(this, editTextID.getText().toString(),
+                editTextFname.getText().toString(), editTextLname.getText().toString())) {
+             Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
+             startActivity(intent);
+         }
     }
 }
