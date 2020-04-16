@@ -17,15 +17,13 @@ public class MainActivity extends AppCompatActivity {
             actionBar.hide();
         }
 
-        try {
+
             DBAccess dbAccess = DBAccess.getInstance(MainActivity.this);
             dbAccess.open();
             dbAccess.getValues();
             dbAccess.close();
 
-        } catch (Exception e) {
-            System.out.println("Null");
-        }
+
     }
 
     public void onClickLogin(View view) {

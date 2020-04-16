@@ -35,7 +35,9 @@ public class DBAccess {
     public void getValues() {
         String sql = "";
         sql = "SELECT * FROM people;";
-        Cursor cursor = database.rawQuery(sql, new String[]{});
+        Cursor cursor = database.rawQuery(sql, null);
+        System.out.println(cursor.getColumnCount());
+        System.out.println(cursor.getCount());
         StringBuilder builder = new StringBuilder();
         int j = 0;
         cursor.moveToFirst();
