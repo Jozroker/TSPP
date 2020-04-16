@@ -22,7 +22,7 @@ public class DBAccess {
     }
 
     public void open() {
-        this.database = openHelper.getWritableDatabase();
+        this.database = openHelper.getReadableDatabase();
     }
 
     public void close() {

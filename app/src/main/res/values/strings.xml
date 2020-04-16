@@ -5,4 +5,5 @@
     <string name="fname">Ім\'я</string>
     <string name="id">ID паспорта</string>
     <string name="Login">Вхід</string>
+    <string name="available_votings">Доступні вибори</string>
 </resources>
