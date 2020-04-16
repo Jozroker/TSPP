@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Vocation</string>
     <string name="nazva">Українські вибори</string>
+    <string name="lname">Прізвище</string>
+    <string name="fname">Ім\'я</string>
+    <string name="id">ID паспорта</string>
+    <string name="Login">Вхід</string>
+    <string name="available_votings">Доступні вибори</string>
+    <string name="date">Дата:</string>
 </resources>
