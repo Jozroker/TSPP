@@ -31,7 +31,10 @@ public class LoginChecker {
 
         if (pass_id.contains(id)) {
             int n = 0;
+            cursor.moveToFirst();
             while (n < cursor.getCount()) {
+                System.out.println(cursor.getString(0));
+                System.out.println(id);
                 if (cursor.getString(0).equals(id)) {
                     if (cursor.getString(1).equals(lname) &&
                         cursor.getString(2).equals(fname)) {
@@ -40,9 +43,9 @@ public class LoginChecker {
                     } else {
                         Toast.makeText(context,"Wrong input values", Toast.LENGTH_SHORT).show();
                     }
-                } else {
-                    continue;
+                    break;
                 }
+                cursor.moveToNext();
                 n++;
             }
         } else {
