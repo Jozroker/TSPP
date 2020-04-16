@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextFname" />
 
     <Button
-        android:id="@+id/buttonLogIn"
+        android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Login"
@@ -96,6 +96,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextID" />
+
+    <Button
+        android:id="@+id/hiddenButton"
+        android:layout_width="33dp"
+        android:layout_height="34dp"
+        android:background="#00FFFFFF"
+        android:onClick="onClickLogin"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.122"
+        tools:visibility="invisible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
