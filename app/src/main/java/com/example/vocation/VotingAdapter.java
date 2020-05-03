@@ -1,5 +1,6 @@
 package com.example.vocation;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,21 @@ import java.util.ArrayList;
 public class VotingAdapter extends RecyclerView.Adapter<VotingAdapter.VotingViewHolder> {
     private ArrayList<Voting> votings;
     public VotingAdapter(ArrayList<Voting> votings) {this.votings=votings;}
+    private final View.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.getMainAppContext(), VotingPage.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            MainActivity.getMainAppContext().startActivity(intent);
+
+        }
+    };
+
     @NonNull
     @Override
     public VotingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.voting, parent, false);
+        view.setOnClickListener(listener);
         return new VotingViewHolder(view);
     }
 
@@ -31,6 +43,7 @@ public class VotingAdapter extends RecyclerView.Adapter<VotingAdapter.VotingView
     public int getItemCount() {
         return votings.size();
     }
+
 
 
 

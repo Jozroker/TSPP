@@ -1,11 +1,11 @@
 package com.example.vocation;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import java.util.ArrayList;
 
@@ -26,5 +26,9 @@ public class VotingsActivity extends AppCompatActivity {
         votingAdapter=new VotingAdapter(votings);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(votingAdapter);
+    }
+
+    public static RecyclerView getRecyclerView() {
+        return recyclerView;
     }
 }

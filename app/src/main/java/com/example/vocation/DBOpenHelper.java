@@ -21,7 +21,8 @@ public class DBOpenHelper extends SQLiteAssetHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-//        new DBOpenHelper(context);
-        DBAccess.getInstance(context);
+        if (oldVersion == 1 && newVersion == 2) {
+            db.execSQL("update people set passport_ID='000000001',Firstname='root',Lastname='root' where ID=1");
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.vocation;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,10 +16,12 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextFname;
     private EditText editTextID;
     protected static String[] currentUser;
+    private static Context myAppContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        myAppContext = getApplicationContext();
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -38,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
          */
 //         if (LoginChecker.autentefication(this, editTextID.getText().toString(),
 //                editTextFname.getText().toString(), editTextLname.getText().toString())) {
-//             Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
+//             Intent intent = new Intent(this, VotingsActivity.class);
 //             startActivity(intent);
 //         }
 
-        Intent intent = new Intent(getApplicationContext(),TestActivity.class);
+        Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
         startActivity(intent);
 
         /**
@@ -50,5 +53,9 @@ public class MainActivity extends AppCompatActivity {
          */
 
 
+    }
+
+    public static Context getMainAppContext() {
+        return myAppContext;
     }
 }
