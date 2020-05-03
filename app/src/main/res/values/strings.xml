@@ -10,4 +10,6 @@
     <string name="votingpage">Сторінка виборів</string>
     <string name="becomecandidate">Стати кандидатом</string>
     <string name="vote">Проголосувати</string>
+    <string name="Info">Інформація</string>
+    <string name="numberofvotes">Кількість голосів:</string>
 </resources>
