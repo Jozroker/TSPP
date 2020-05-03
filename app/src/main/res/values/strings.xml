@@ -7,4 +7,7 @@
     <string name="Login">Вхід</string>
     <string name="available_votings">Доступні вибори</string>
     <string name="date">Дата:</string>
+    <string name="votingpage">Сторінка виборів</string>
+    <string name="becomecandidate">Стати кандидатом</string>
+    <string name="vote">Проголосувати</string>
 </resources>
