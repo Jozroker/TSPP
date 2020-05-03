@@ -1,6 +1,7 @@
 package com.example.vocation;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -43,16 +44,32 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent2);
                 break;
             case R.id.buttonLogin:
-//                 if (LoginChecker.autentefication(this, editTextID.getText().toString(),
-//                        editTextFname.getText().toString(), editTextLname.getText().toString())) {
-//                     Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
-//                     startActivity(intent);
-//                 }
+                 if (LoginChecker.autentefication(this, editTextID.getText().toString(),
+                        editTextFname.getText().toString(), editTextLname.getText().toString())) {
+                     Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
+                     startActivity(intent);
+                 }
 
-                Intent intent = new Intent(this,VotingsActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(this,VotingsActivity.class);
+//                startActivity(intent);
                 break;
         }
+        DBAccess access = DBAccess.getInstance(this);
+        access.open();
+        Cursor cursor = access.getDatabase().rawQuery("SELECT * FROM people;", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            int i = 0;
+            while (cursor.getColumnCount() > i) {
+                System.out.print(cursor.getString(i) + " ");
+                i++;
+
+            }
+            cursor.moveToNext();
+            System.out.print("\n");
+        }
+
+//        access.close();
 
     }
 }

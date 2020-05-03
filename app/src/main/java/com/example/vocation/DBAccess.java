@@ -22,12 +22,13 @@ public class DBAccess {
     }
 
     public void open() {
-        this.database = openHelper.getReadableDatabase();
+        this.database = openHelper.getWritableDatabase();
     }
 
     public void close() {
         if (database != null) {
             this.database.close();
+            openHelper.close();
         }
     }
 
