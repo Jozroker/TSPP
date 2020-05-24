@@ -23,6 +23,7 @@ public class VotingsActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.recyclerView);
         ArrayList<Voting> votings = new ArrayList<>();
         votings.add(new Voting("Вибори Президента","20.10.2020"));
+        votings.add(new Voting("test","20.20.2020"));
         votingAdapter=new VotingAdapter(votings);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(votingAdapter);

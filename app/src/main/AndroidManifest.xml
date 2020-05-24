@@ -11,9 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".VotingPage"></activity>
+        <activity android:name=".VotingPage"/>
         <activity android:name=".TestActivity" />
         <activity android:name=".VotingsActivity" />
+        <activity android:name=".CandidatesActivity"
+                  android:launchMode="singleTop">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.vocation.VotingPage" />
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

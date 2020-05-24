@@ -1,0 +1,27 @@
+
+h
+8app/src/main/java/com/example/vocation/TestActivity.java,1\a\1aebd5312e7272a8b8a11c6fb2e5ba49e088ab2c
+e
+5app/src/main/java/com/example/vocation/Candidate.java,7\a\7a7d0a3e9e945da722c4b71d2cebf117240ac943
+h
+8app/src/main/java/com/example/vocation/LoginChecker.java,b\7\b74b4050742cc42f70ee8d18d1e33750fc225f8a
+k
+;app/src/main/java/com/example/vocation/VotingsActivity.java,9\7\97916d2ffad8c47d9a450dcecd0dc3c9b89bc508
+d
+4app/src/main/java/com/example/vocation/DBAccess.java,8\4\8429c2ff2dfa7ecf6d7df5fa327061d9740f46e8
+l
+<app/src/main/java/com/example/vocation/CandidateAdapter.java,f\0\f0ae46dd0cb8900b6f3589203787114a3b0204ab
+i
+9app/src/main/java/com/example/vocation/VotingAdapter.java,2\3\231d81e7e475d822693735480e8486378a043a55
+h
+8app/src/main/java/com/example/vocation/DBOpenHelper.java,0\8\086ce461c090fd7b27b776b57e0a35776fafd227
+n
+>app/src/main/java/com/example/vocation/CandidatesActivity.java,3\9\39c7933a9a71268e5892008da0a578cb4f41475a
+p
+@app/src/main/java/com/example/vocation/CandidateListAdapter.java,c\2\c21b1e53ffb2bc89a2b87f99408f34bdab0aee70
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+f
+6app/src/main/java/com/example/vocation/VotingPage.java,7\4\74c3c9c670ebe4d5654235fb5c55460b33bfa094
+h
+8app/src/main/java/com/example/vocation/MainActivity.java,0\e\0e989154a9ef5ab6e5e077b77303545c2c95e260

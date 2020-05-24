@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class VotingAdapter extends RecyclerView.Adapter<VotingAdapter.VotingViewHolder> {
     private ArrayList<Voting> votings;
+    public static int Position;
     public VotingAdapter(ArrayList<Voting> votings) {this.votings=votings;}
     private final View.OnClickListener listener = new View.OnClickListener() {
         @Override
@@ -20,9 +21,18 @@ public class VotingAdapter extends RecyclerView.Adapter<VotingAdapter.VotingView
             Intent intent = new Intent(MainActivity.getMainAppContext(), VotingPage.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             MainActivity.getMainAppContext().startActivity(intent);
-
+            System.out.println();
         }
     };
+//    private final AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+//        @Override
+//        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//            Intent intent = new Intent(MainActivity.getMainAppContext(), VotingPage.class);
+//            Position = position;
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            MainActivity.getMainAppContext().startActivity(intent);
+//        }
+//    };
 
     @NonNull
     @Override
@@ -37,6 +47,7 @@ public class VotingAdapter extends RecyclerView.Adapter<VotingAdapter.VotingView
         Voting voting = votings.get(position);
         holder.textViewName.setText(voting.getName());
         holder.textViewDate.setText(voting.getDate());
+        System.out.println(position);
     }
 
     @Override

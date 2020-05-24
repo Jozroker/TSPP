@@ -1,6 +1,7 @@
 package com.example.vocation;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -34,33 +35,34 @@ public class DBAccess {
 
 
 
-//    public void getValues() {
-//        String sql = "";
-//        sql = "SELECT * FROM people;";
-//        Cursor cursor = database.rawQuery(sql, null);
+    public void getValues() {
+        String sql = "";
+        sql = "SELECT * FROM  candidates;";
+        Cursor cursor = database.rawQuery(sql, null);
 //        System.out.println(cursor.getColumnCount());
 //        System.out.println(cursor.getCount());
-//        StringBuilder builder = new StringBuilder();
-//        int j = 0;
-//        cursor.moveToFirst();
-//        while (!cursor.isAfterLast()) {
-//            while (j < cursor.getColumnCount()) {
-//                builder.append(cursor.getString(j));
-//                builder.append(", ");
-//                j++;
-//            }
-//            cursor.moveToNext();
-//            builder.append("\n");
-//            j = 0;
-//        }
-//
-//        cursor.close();
-//        System.out.println(builder.toString());
-//    }
+        StringBuilder builder = new StringBuilder();
+        int j = 0;
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            while (j < cursor.getColumnCount()) {
+                builder.append(cursor.getString(j));
+                builder.append(", ");
+                j++;
+            }
+            cursor.moveToNext();
+            builder.append("\n");
+            j = 0;
+        }
+
+        cursor.close();
+        System.out.println(builder.toString());
+    }
 
 
 
     public SQLiteDatabase getDatabase() {
+//        getValues();
         return database;
     }
 }
