@@ -42,12 +42,17 @@ public class MainActivity extends AppCompatActivity {
          * Uncomment main login method
          *
          */
-         if (LoginChecker.autentefication(this, editTextID.getText().toString(),
-                editTextFname.getText().toString(), editTextLname.getText().toString())) {
-             Intent intent = new Intent(this, VotingsActivity.class);
-             startActivity(intent);
-         }
-
+        switch (view.getId()) {
+            case R.id.hiddenButton:
+                Intent test = new Intent(this, TestActivity.class);
+                startActivity(test);
+            case R.id.buttonLogin:
+                if (LoginChecker.autentefication(this, editTextID.getText().toString(),
+                        editTextFname.getText().toString(), editTextLname.getText().toString())) {
+                    Intent intent = new Intent(this, VotingsActivity.class);
+                    startActivity(intent);
+                }
+        }
 
 //        Intent intent = new Intent(getApplicationContext(),VotingsActivity.class);
 //        startActivity(intent);
