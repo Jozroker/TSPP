@@ -88,7 +88,8 @@ public class VotingPage extends AppCompatActivity {
         /**/
         String sql = "SELECT  * FROM  " + MainActivity.currentVotingDatabase + " WHERE  People_ID = '" + currentUserId + "';";
         Cursor cursor = database.getDatabase().rawQuery(sql, null);
-        if (cursor.getCount() != 0) {
+        int canVote = Integer.parseInt(MainActivity.currentUser[4]);
+        if (cursor.getCount() != 0 || canVote == 0) {
             voteButton.setEnabled(false);
             voteButton.setBackgroundColor(R.color.cardview_dark_background);
         }
@@ -98,7 +99,10 @@ public class VotingPage extends AppCompatActivity {
     private void checkIsCandidate() {
         String sql = "SELECT  * FROM  " + MainActivity.currentCandidatesDatabase + " WHERE  ID = '" + currentUserId + "';";
         Cursor cursor = database.getDatabase().rawQuery(sql, null);
-        if (cursor.getCount() != 0) {
+        int correctAge = Integer.parseInt(MainActivity.currentUser[3]);
+        int liveInUkr = Integer.parseInt(MainActivity.currentUser[5]);
+        int speakUkr = Integer.parseInt(MainActivity.currentUser[6]);
+        if (cursor.getCount() != 0 || correctAge == 0 || liveInUkr == 0 || speakUkr == 0) {
             beCandidateButton.setEnabled(false);
             beCandidateButton.setBackgroundColor(R.color.cardview_dark_background);
         }

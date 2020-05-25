@@ -37,7 +37,7 @@ public class DBAccess {
 
     public void getValues() {
         String sql = "";
-        sql = "SELECT * FROM  candidates;";
+        sql = "SELECT * FROM people;";
         Cursor cursor = database.rawQuery(sql, null);
 //        System.out.println(cursor.getColumnCount());
 //        System.out.println(cursor.getCount());
@@ -62,7 +62,7 @@ public class DBAccess {
 
 
     public SQLiteDatabase getDatabase() {
-//        getValues();
+        getValues();
         return database;
     }
 }

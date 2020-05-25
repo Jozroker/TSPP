@@ -20,11 +20,11 @@ public class LoginChecker {
         dbAccess.open();
         List<String> pass_id = new ArrayList<>();
         @SuppressLint("Recycle")
-        Cursor cursor = dbAccess.getDatabase().rawQuery("SELECT passport_ID, Lastname, Firstname FROM people;", null);
+        Cursor cursor = dbAccess.getDatabase().rawQuery("SELECT * FROM people;", null);
         cursor.moveToFirst();
         int i = 0;
         while (i < cursor.getCount()) {
-            pass_id.add(cursor.getString(0));
+            pass_id.add(cursor.getString(1));
             cursor.moveToNext();
             i++;
         }
@@ -33,10 +33,14 @@ public class LoginChecker {
             int n = 0;
             cursor.moveToFirst();
             while (n < cursor.getCount()) {
-                if (cursor.getString(0).equals(id)) {
-                    if (cursor.getString(1).equals(lname) &&
-                        cursor.getString(2).equals(fname)) {
-                        MainActivity.currentUser = new String[]{id, fname, lname};
+                if (cursor.getString(1).equals(id)) {
+                    if (cursor.getString(2).equals(lname) &&
+                        cursor.getString(3).equals(fname)) {
+                        String correctAge = cursor.getString(4);
+                        String canVote = cursor.getString(5);
+                        String liveInUkr = cursor.getString(6);
+                        String speakUkr = cursor.getString(7);
+                        MainActivity.currentUser = new String[]{id, fname, lname, correctAge, canVote, liveInUkr, speakUkr};
                         value = true;
                     } else {
                         Toast.makeText(context,"Wrong input values", Toast.LENGTH_SHORT).show();
