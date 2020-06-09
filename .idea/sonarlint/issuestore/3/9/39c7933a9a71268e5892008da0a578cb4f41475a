@@ -1,0 +1,11 @@
+
+~
+java:S1450"cRemove the "candidateListAdapter" field and declare it as a local variable in the relevant methods.(¬ßØøÿÿÿÿ
+v
+java:S1450"[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(û‹¤¼üÿÿÿÿ
+t
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+L
+java:S2696<"6Make the enclosing method "static" or remove this set.(ŠùØ
+Q
+java:S2696="6Make the enclosing method "static" or remove this set.(Àê¿Ôúÿÿÿÿ
