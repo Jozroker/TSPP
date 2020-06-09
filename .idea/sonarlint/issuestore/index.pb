@@ -25,3 +25,5 @@ f
 6app/src/main/java/com/example/vocation/VotingPage.java,7\4\74c3c9c670ebe4d5654235fb5c55460b33bfa094
 h
 8app/src/main/java/com/example/vocation/MainActivity.java,0\e\0e989154a9ef5ab6e5e077b77303545c2c95e260
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
